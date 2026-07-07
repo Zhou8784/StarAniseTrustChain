@@ -1,0 +1,82 @@
+<scroll-view scroll-y class="page">
+
+<!-- 顶部 -->
+<view class="header">
+  <text class="title">八角品质溯源系统</text>
+  <text class="subtitle">AI检测 · 区块链存证 · 全链路追溯</text>
+</view>
+
+<!-- 扫码区域 -->
+<view class="scan-card" bindtap="onScanTap">
+  <view class="scan-circle">📷</view>
+  <text class="scan-title">扫描产品溯源码</text>
+  <text class="scan-desc">点击扫码查看AI品质检测报告</text>
+</view>
+
+<!-- 查询结果 -->
+<view wx:if="{{showCard && traceResult}}" class="result-wrap">
+
+  <!-- AI检测结果 -->
+  <view class="ai-card">
+    <view class="level-tag">{{traceResult.level}}</view>
+    <view class="score">综合评分：{{traceResult.goodRate}} 分</view>
+    <view class="confidence">AI识别置信度：{{traceResult.goodRate || 0}}%</view>
+  </view>
+
+  <!-- 品质指标 -->
+  <view class="info-card">
+    <view class="card-title">品质指标</view>
+    <view class="row">
+      <text>完整果占比</text>
+      <text>{{traceResult.goodRate}}%</text>
+    </view>
+    <view class="row">
+      <text>破损率</text>
+      <text>{{traceResult.brokenRate}}%</text>
+    </view>
+    <view class="row">ssh root@192.168.124.232
+      <text>杂质率</text>
+      <text>{{traceResult.impurityRate}}%</text>
+    </view>
+    <view class="row">
+      <text>霉变率</text>
+      <text>{{traceResult.mildewRate}}</text>
+    </view>
+  </view>
+
+  <!-- AI分析结论 -->
+  <view class="info-card">
+    <view class="card-title">AI分析结论</view>
+    <view class="conclusion">{{traceResult.conclusion}}</view>
+  </view>
+
+  <!-- 产品信息 -->
+  <view class="info-card">
+    <view class="card-title">产品信息</view>
+    <view class="row">
+      <text>批次编号</text>
+      <text>{{traceResult.batchNumber}}</text>
+    </view>
+    <view class="row">
+      <text>产地</text>
+      <text>{{traceResult.origin}}</text>
+    </view>
+    <view class="row">
+      <text>检测时间</text>
+      <text>{{traceResult.detectTime}}</text>
+    </view>
+  </view>
+
+  <!-- 区块链 -->
+  <view class="block-card">
+    <view class="card-title">⛓ 区块链存证</view>
+    <view class="block-status">✔ {{traceResult.blockchainStatus}}</view>
+    <view class="hash-title">HASH凭证</view>
+    <view class="hash-box">{{traceResult.txHash}}</view>
+  </view>
+
+  <!-- 查看报告 -->
+  <button class="report-btn" bindtap="onCardTap">查看完整检测报告</button>
+
+</view>
+</scroll-view>

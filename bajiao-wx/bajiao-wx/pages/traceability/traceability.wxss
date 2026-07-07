@@ -1,0 +1,415 @@
+/* pages/traceability/traceability.wxss */
+
+/* ========== 引入 iconfont 字体 ========== */
+@font-face {
+  font-family: "iconfont";
+  src: url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAP4AAsAAAAACCAAAAOqAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHFQGYACDBgqDdINMATYCJAMMCwgABCAFhGcHPBsuB8guIScbXkQqokFTLFsxVXH35sJOW3yMxcN/+7X7Zub/xaWpdrFEIokmDmkboVBJkCqR0olk79QdWnM3TJPJTTVi4veb33M78EbbOhKhWaSJWxNPNDNyLfeBkkcSntwrIAdYJoWUyN7Zh/ElskQK2FfIyurLvTiT5EArTaDR85Jh/v/vHf+GJ3LbADDH8vCBfQ/oAzX2IOzkAXkKsnswFnmJQIcNiVyOMvnlIKDZT20gnBsTHySV0RzXtwAvwag0VIY2oUYnFsQLKtKT/A3wHHw+/hAOLSRVhrnMyX1GO1g68rylYBIjf8DDCVTnhAoZKyszx22z85xrlFzhqqNK6UYX1oqQRo1IEoFQU9dr/uMlooZZ3gUWKEU6KZHDJfhKQKmc/zRqtOMVvFPUoaMrZdQR4ufwRPjrO4UhmYyfXVEq1lmNEGEfgng7cVyelpY2xTo8HjQoRzH5YQt7gzfzxosT2lgx6gpTvaatWnvUsfHxeb+j9OSi5YLDWy8tmrN63gqwytlZ4SjVmbZabM3hLSuFF47KXvIZYE0PSlmucxw88qdP8f2B3b8lnLNn/PSSCNfs5vuH/NFJ/8IP4fKOL7Li/Hfu80CfGyuRP7c6fL4cD2SqZAE+X/avzSb9pZPOL2eX74Mjcs773+uDRDbR1VPRVWZrkff7fvsDXUHEfQ/wL7xDwh+twNO8MlFdXJ0yX56XKy9QzNg8hhfz0ryiTlRXvjierhjlhTz+BPJ1xdE5/FJtgSi56Hu/EVv3nY99BVp+adlQXbE6/+TRifjj4RnhY5ljHvM4P4ifJk0rhXvRPfQxu+Zj+RrQmrMK/j/+jf+7aQqM/9dSJeDTgGfgby3A3EDbzTuDP6q6BpFFC5FLldDpIZDdcX9VpTp04BdWw4CH/upBOE5oy4h4SBomIWszhRXqElQ6bUGtzTZ0WJYxvdMglqsoOjBnkEDoMwFJjzfI+mxihXoJlRHPUOvzBx1Ow3+xTnMxmCSohaJ22NoLjW3YxtgaGhAtRfpOSwspi1UiYjdSEahVafKZLGRDZIgh9i69jlIGMgRbYSa3HbJYMGQJNqE2qjJQysaq1UzVW1Rt2ArSEEgLCmkHteoFGbXBbBgPTbPfVwrR62TRgoBYZZKwM1LEIS0VDYBlKW1QzZUsY9dFT4eiGBCDkLQVlCnYEYuaxCC2up0J0oZSMfSIs2KpLRSDKlXzq60Ptw46mENyyGUKmRJtD/241+i28Gwft+m7kREAAAA=') format('woff2');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 32rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-saoyisao:before {
+  content: "\e739";
+}
+
+.icon-dingwei:before {
+  content: "\e7a3";
+}
+
+.page{
+  background:#f6f7fb;
+  min-height:100vh;
+}
+
+.header{
+  height:260rpx;
+
+  background:linear-gradient(
+    135deg,
+    #0F6A41,
+    #27AE60
+  );
+
+  border-bottom-left-radius:60rpx;
+  border-bottom-right-radius:60rpx;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.title{
+  color:#fff;
+  font-size:100rpx;
+  font-weight:bold;
+}
+
+.subtitle{
+  color:rgba(255,255,255,.85);
+  font-size:26rpx;
+  margin-top:12rpx;
+  display:block;
+}
+
+.scan-card{
+  width:690rpx;
+  margin:-40rpx auto 30rpx;
+  background:#fff;
+  border-radius:24rpx;
+  padding:40rpx;
+  text-align:center;
+  box-shadow:0 10rpx 30rpx rgba(0,0,0,.08);
+}
+
+.scan-circle{
+  width:120rpx;
+  height:120rpx;
+  border-radius:60rpx;
+  background:#0F6A41;
+  color:#fff;
+  margin:auto;
+  line-height:120rpx;
+  font-size:50rpx;
+}
+
+.scan-title{
+  display:block;
+  margin-top:20rpx;
+  font-size:34rpx;
+  font-weight:bold;
+}
+
+.scan-desc{
+  display:block;
+  color:#888;
+  margin-top:10rpx;
+}
+
+.search-box{
+  width:690rpx;
+  margin:auto;
+  display:flex;
+}
+
+.search-input{
+  flex:1;
+  background:#fff;
+  height:90rpx;
+  border-radius:16rpx;
+  padding:0 20rpx;
+}
+
+.search-btn{
+  width:150rpx;
+  height:90rpx;
+  margin-left:20rpx;
+  background:#0F6A41;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:16rpx;
+}
+
+.result-wrap{
+  width:690rpx;
+  margin:30rpx auto;
+}
+
+.ai-card,
+.image-card,
+.info-card,
+.block-card{
+  background:#fff;
+  border-radius:20rpx;
+  padding:30rpx;
+  margin-bottom:20rpx;
+}
+
+.level-tag{
+  color:#0F6A41;
+  font-size:40rpx;
+  font-weight:bold;
+}
+
+.confidence{
+  margin-top:10rpx;
+  color:#666;
+}
+
+.product-image{
+  width:100%;
+  height:400rpx;
+  border-radius:16rpx;
+}
+
+.row{
+  display:flex;
+  justify-content:space-between;
+  padding:20rpx 0;
+  border-bottom:1rpx solid #eee;
+}
+
+.row:last-child{
+  border:none;
+}
+
+.block-title{
+  font-size:32rpx;
+  font-weight:bold;
+}
+
+.block-status{
+  color:#0F6A41;
+  margin-top:20rpx;
+  font-weight:bold;
+}
+
+.hash-box{
+  margin-top:20rpx;
+  padding:20rpx;
+  background:#f5f5f5;
+  border-radius:12rpx;
+  word-break:break-all;
+  font-size:24rpx;
+}
+
+.report-btn{
+  background:#0F6A41;
+  color:#fff;
+  border-radius:20rpx;
+}
+/* 页面背景 */
+.page{
+  background:#f5f7fa;
+  min-height:100vh;
+}
+
+/* 顶部 */
+.header{
+  height:260rpx;
+
+  background:linear-gradient(
+    135deg,
+    #0F6A41,
+    #1E8C5A
+  );
+
+  display:flex;
+  flex-direction:column;
+
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+}
+
+.title{
+  color:#fff;
+  font-size:52rpx;
+  font-weight:bold;
+}
+
+.subtitle{
+  margin-top:16rpx;
+
+  color:rgba(255,255,255,.9);
+
+  font-size:28rpx;
+}
+
+/* 扫码卡片 */
+.scan-card{
+  width:690rpx;
+
+  margin:-40rpx auto 30rpx;
+
+  background:#fff;
+
+  border-radius:28rpx;
+
+  padding:40rpx;
+
+  text-align:center;
+
+  box-sizing:border-box;
+
+  box-shadow:
+  0 12rpx 30rpx rgba(0,0,0,.08);
+}
+
+.scan-circle{
+  width:140rpx;
+  height:140rpx;
+
+  border-radius:70rpx;
+
+  background:#0F6A41;
+
+  color:#fff;
+
+  margin:auto;
+
+  line-height:140rpx;
+
+  font-size:60rpx;
+}
+
+.scan-title{
+  display:block;
+
+  margin-top:20rpx;
+
+  font-size:34rpx;
+
+  font-weight:bold;
+}
+
+.scan-desc{
+  display:block;
+
+  margin-top:12rpx;
+
+  color:#888;
+
+  font-size:26rpx;
+}
+
+/* 卡片统一 */
+.ai-card,
+.image-card,
+.info-card,
+.block-card{
+  background:#fff;
+
+  border-radius:24rpx;
+
+  padding:30rpx;
+
+  margin-bottom:20rpx;
+
+  box-shadow:
+  0 6rpx 20rpx rgba(0,0,0,.05);
+}
+
+/* AI结果 */
+.badge{
+  display:inline-block;
+
+  padding:8rpx 20rpx;
+
+  background:#E8F5EE;
+
+  color:#0F6A41;
+
+  border-radius:20rpx;
+
+  font-size:24rpx;
+}
+
+.level-tag{
+  margin-top:20rpx;
+  font-size:54rpx;
+  font-weight:bold;
+  color:#0F6A41;
+}
+.confidence{
+  margin-top:12rpx;
+  color:#666;
+}
+/* 标题 */
+.card-title{
+  font-size:30rpx;
+  font-weight:bold;
+  margin-bottom:20rpx;
+}
+/* 图片 */
+.product-image{
+  width:100%;
+  height:420rpx;
+  border-radius:16rpx;
+}
+/* 信息 */
+.row{
+  display:flex;
+  justify-content:space-between;
+  padding:24rpx 0;
+  border-bottom:1rpx solid #eee;
+}
+.row:last-child{
+  border:none;
+}
+/* 区块链 */
+.block-status{
+  color:#0F6A41;
+  font-size:30rpx;
+  font-weight:bold;
+  margin-top:10rpx;
+}
+.hash-title{
+  margin-top:20rpx;
+  font-size:26rpx;
+  color:#666;
+}
+.hash-box{
+  margin-top:10rpx;
+  padding:20rpx;
+  background:#F5F5F5;
+  border-radius:12rpx;
+  word-break:break-all;
+  font-size:24rpx;
+}
+/* 按钮 */
+.report-btn{
+  background:#0F6A41;
+  color:#fff;
+  border-radius:20rpx;
+  font-size:30rpx;
+  margin-top:20rpx;
+}
+/* 空状态 */
+.empty-box{
+  margin-top:120rpx;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.empty-icon{
+  font-size:90rpx;
+}
+.empty-text{
+  margin-top:20rpx;
+  color:#999;
+  font-size:28rpx;
+}
+.score{
+  margin-top:16rpx;
+  font-size:34rpx;
+  color:#333;
+  font-weight:bold;
+}
+
+.card-title{
+  font-size:30rpx;
+  font-weight:bold;
+  margin-bottom:20rpx;
+}
+
+.conclusion{
+  line-height:48rpx;
+  color:#555;
+  font-size:28rpx;
+}
+.qrcode-image{
+  width:300rpx;
+  height:300rpx;
+  display:block;
+  margin:20rpx auto;
+}

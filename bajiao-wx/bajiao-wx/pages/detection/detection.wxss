@@ -1,0 +1,372 @@
+
+page{
+  background:#F5F7FA;
+}
+
+/* ==========================
+顶部Banner
+========================== */
+
+.header-bar{
+  height:260rpx;
+
+  background:linear-gradient(
+    135deg,
+    #0F6A41,
+    #27AE60
+  );
+
+  border-bottom-left-radius:40rpx;
+  border-bottom-right-radius:40rpx;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.header-title{
+  color:#fff;
+  font-size:66rpx;
+  font-weight:800;
+}
+
+.header-subtitle{
+  color:rgba(255,255,255,.9);
+  font-size:26rpx;
+  margin-top:12rpx;
+}
+
+/* ==========================
+统一卡片
+========================== */
+
+.model-card,
+.ai-process-card,
+.metrics-card,
+.fusion-card,
+.chain-card{
+  margin:24rpx;
+  padding:30rpx;
+
+  background:#fff;
+
+  border-radius:24rpx;
+
+  box-shadow:
+  0 8rpx 24rpx rgba(15,106,65,.08);
+}
+
+/* ==========================
+统一标题
+========================== */
+
+.card-title,
+.ai-title,
+.fusion-title,
+.chain-title{
+  font-size:38rpx;
+  font-weight:700;
+  color:#0F6A41;
+
+  margin-bottom:24rpx;
+}
+
+
+/* ==========================
+检测结果
+========================== */
+
+.result-section,
+.result-title{
+  font-size:34rpx;
+  font-weight:700;
+  color:#222;
+}
+
+.result-content{
+  margin-top:20rpx;
+}
+
+.detection-result-card{
+  background:#fff;
+
+  border-radius:24rpx;
+
+  padding:30rpx;
+
+  box-shadow:
+  0 8rpx 24rpx rgba(0,0,0,.05);
+}
+
+.result-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding-bottom:20rpx;
+
+  border-bottom:1rpx solid #eee;
+}
+
+.result-badge{
+  color:#18A058;
+  font-size:28rpx;
+  font-weight:700;
+}
+
+.result-time{
+  color:#999;
+  font-size:24rpx;
+}
+
+
+/* ==========================
+评分卡
+========================== */
+
+.score-card{
+  margin-top:24rpx;
+
+  padding:30rpx;
+
+  border-radius:24rpx;
+
+  background:linear-gradient(
+    135deg,
+    #0F6A41,
+    #27AE60
+  );
+
+  text-align:center;
+}
+
+.score-ring{
+  width:160rpx;
+  height:160rpx;
+
+  margin:0 auto;
+
+  border-radius:50%;
+
+  border:8rpx solid rgba(255,255,255,.25);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.score-number{
+  color:#fff;
+  font-size:56rpx;
+  font-weight:700;
+}
+
+.score-label{
+  /*display:inline-block;*/
+  color:#fff;
+  margin-right:20rpx;
+}
+
+.score-level{
+  display:inline-block;
+  color:#FFE66D;
+  font-size:40rpx;
+  font-weight:700;
+}
+
+.quality-bar{
+  height:12rpx;
+
+  margin-top:24rpx;
+
+  background:rgba(255,255,255,.25);
+
+  border-radius:20rpx;
+
+  overflow:hidden;
+}
+
+.quality-fill{
+  width:95%;
+  height:100%;
+
+  background:#FFE66D;
+}
+
+/* ==========================
+指标网格
+========================== */
+
+.metrics-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  gap:20rpx;
+}
+
+.metric-box{
+  background:#F8FAF9;
+
+  padding:30rpx 20rpx;
+
+  border-radius:18rpx;
+
+  text-align:center;
+
+  min-height:140rpx;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+}
+.metric-name{
+  color:#888;
+  font: size 24rpx;
+}
+
+.metric-value{
+  display:block;
+
+  margin-top:10rpx;
+
+  color:#0F6A41;
+
+  font-size:32rpx;
+  font-weight:700;
+}
+
+/* ==========================
+详情列表
+========================== */
+
+.detail-item{
+  display:flex;
+  justify-content:space-between;
+
+  padding:18rpx 0;
+
+  border-bottom:1rpx solid #f2f2f2;
+}
+
+.detail-item:last-child{
+  border:none;
+}
+
+.detail-label{
+  color:#666;
+  font-size:28rpx;
+}
+
+.detail-value{
+  color:#222;
+  font-size:28rpx;
+  font-weight:600;
+}
+
+/* ==========================
+融合分析
+========================== */
+
+.fusion-row,
+.chain-item{
+  display:flex;
+  justify-content:space-between;
+
+  padding:18rpx 0;
+
+  border-bottom:1rpx solid #f2f2f2;
+}
+
+.fusion-row:last-child,
+.chain-item:last-child{
+  border:none;
+}
+
+.fusion-grade{
+  color:#0F6A41;
+  font-weight:700;
+}
+
+/* ==========================
+按钮
+========================== */
+
+.blockchain-btn,
+.trace-btn{
+  width:650rpx;
+  height:96rpx;
+
+  margin:20rpx auto;
+
+  border-radius:20rpx;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:30rpx;
+  font-weight:700;
+
+  box-sizing:border-box;
+}
+
+.blockchain-btn{
+  background:linear-gradient(
+    135deg,
+    #0F6A41,
+    #27AE60
+  );
+}
+
+.btn-text{
+  color:#fff;
+}
+
+.trace-btn{
+  padding:0 !important;
+
+  background:#fff;
+
+  color:#0F6A41;
+
+  border:2rpx solid #0F6A41;
+
+  line-height:96rpx;
+}
+
+/* 空状态 - 居中 */
+.empty-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 100%;
+}
+
+.empty-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx;
+}
+
+.empty-icon {
+  font-size: 120rpx;
+  margin-bottom: 30rpx;
+}
+
+.empty-title {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16rpx;
+}
+
+.empty-desc {
+  font-size: 28rpx;
+  color: #999;
+}

@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/detection/detection",
+    "pages/traceability/traceability",
+    "pages/my/my",
+    "pages/InspectReport/InspectReport",
+    "pages/InspectReport1/InspectReport1"
+  ],
+
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#0F6A41",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "position": "bottom",
+
+    "list": [
+      {
+        "pagePath": "pages/detection/detection",
+        "text": "检测"
+      },
+      {
+        "pagePath": "pages/traceability/traceability",
+        "text": "溯源"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于获取附近检测点"
+    }
+  },
+
+  "requiredPrivateInfos": [
+    "getLocation"
+  ],
+
+  "window": {
+    "navigationBarTitleText": "八角品质检测与溯源平台",
+    "navigationBarBackgroundColor": "#0F6A41",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false,
+    "backgroundColor": "#F5F7FA",
+    "backgroundTextStyle": "light"
+  },
+
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

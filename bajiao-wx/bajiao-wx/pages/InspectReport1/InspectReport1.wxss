@@ -1,0 +1,339 @@
+/* pages/InspectReport1/InspectReport1.wxss */
+
+page {
+  background: #F3F6F9;
+}
+
+.page {
+  min-height: 100vh;
+  background: #F3F6F9;
+}
+
+/* ===================================
+   顶部
+=================================== */
+
+.header {
+  background: linear-gradient(180deg, #0E6A42, #158A55);
+  padding: 70rpx 40rpx 110rpx;
+  text-align: center;
+  color: #fff;
+  border-bottom-left-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+}
+
+.title {
+  display: block;
+  font-size: 46rpx;
+  font-weight: 700;
+  letter-spacing: 2rpx;
+}
+
+.batch {
+  display: block;
+  margin-top: 28rpx;
+  font-size: 28rpx;
+  opacity: .95;
+}
+
+.time {
+  display: block;
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  opacity: .75;
+}
+
+/* ===================================
+   综合检测卡片
+=================================== */
+
+.summary-card {
+  width: 700rpx;
+  margin: -70rpx auto 24rpx;
+  background: #fff;
+  border-radius: 28rpx;
+  overflow: hidden;
+  box-shadow: 0 12rpx 40rpx rgba(0,0,0,.08);
+}
+
+.summary-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36rpx;
+}
+
+.level-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.level-label {
+  color: #999;
+  font-size: 24rpx;
+}
+
+.level {
+  margin-top: 12rpx;
+  font-size: 58rpx;
+  color: #11844F;
+  font-weight: bold;
+}
+
+.chain-tag {
+  background: #EAF8F1;
+  color: #19A15F;
+  padding: 12rpx 26rpx;
+  border-radius: 999rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.summary-grid {
+  display: flex;
+  border-top: 1rpx solid #F2F2F2;
+}
+
+.summary-item {
+  flex: 1;
+  padding: 30rpx 0;
+  text-align: center;
+}
+
+.summary-item+.summary-item {
+  border-left: 1rpx solid #F2F2F2;
+}
+
+.summary-value {
+  display: block;
+  color: #11844F;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.summary-name {
+  display: block;
+  margin-top: 10rpx;
+  color: #888;
+  font-size: 24rpx;
+}
+
+/* ===================================
+   通用卡片
+=================================== */
+
+.card {
+  width: 700rpx;
+  margin: 24rpx auto;
+  background: #fff;
+  border-radius: 24rpx;
+  box-shadow: 0 8rpx 26rpx rgba(0,0,0,.05);
+  padding: 32rpx;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.card-title {
+  position: relative;
+  padding-left: 24rpx;
+  margin-bottom: 28rpx;
+  color: #156C44;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.card-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6rpx;
+  width: 8rpx;
+  height: 38rpx;
+  border-radius: 99rpx;
+  background: #17A05D;
+}
+
+/* ===================================
+   图片
+=================================== */
+
+.image-wrapper {
+  width: 100%;
+  border-radius: 18rpx;
+  overflow: hidden;
+  background: #f5f5f5;
+  min-height: 200rpx;
+}
+
+.detect-image {
+  width: 100%;
+  display: block;
+  background: #f5f5f5;
+}
+
+.image-empty {
+  height: 360rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F8F8F8;
+  color: #AAA;
+  border-radius: 18rpx;
+  font-size: 28rpx;
+}
+
+/* ===================================
+   AI统计
+=================================== */
+
+.statistics-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.statistics-item {
+  width: 31%;
+  margin-bottom: 22rpx;
+  background: #F8FAFB;
+  border-radius: 18rpx;
+  padding: 30rpx 0;
+  text-align: center;
+}
+
+.statistics-number {
+  display: block;
+  color: #11844F;
+  font-size: 42rpx;
+  font-weight: bold;
+}
+
+.statistics-name {
+  display: block;
+  margin-top: 12rpx;
+  color: #888;
+  font-size: 24rpx;
+}
+
+/* ===================================
+   信息行
+=================================== */
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26rpx 0;
+  border-bottom: 1rpx solid #F1F3F5;
+}
+
+.row:last-child {
+  border: none;
+}
+
+.row text:first-child {
+  color: #777;
+  font-size: 28rpx;
+}
+
+.row text:last-child {
+  color: #222;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+/* ===================================
+   状态标签
+=================================== */
+
+.status-tag {
+  background: #EAF8F1;
+  color: #18A05D;
+  border-radius: 999rpx;
+  padding: 10rpx 24rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+/* ===================================
+   Hash
+=================================== */
+
+.hash-card {
+  margin-top: 20rpx;
+  background: #F8FAFB;
+  border-radius: 16rpx;
+  padding: 24rpx;
+}
+
+.hash-title {
+  display: block;
+  color: #999;
+  font-size: 24rpx;
+}
+
+.hash-content {
+  display: block;
+  margin-top: 16rpx;
+  color: #444;
+  font-size: 22rpx;
+  line-height: 36rpx;
+  word-break: break-all;
+}
+
+/* ===================================
+   溯源码和二维码
+=================================== */
+
+.trace-code-box {
+  background: #f5f7fa;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin: 16rpx 0;
+  text-align: center;
+}
+
+.trace-code {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #0F6A41;
+  word-break: break-all;
+  letter-spacing: 2rpx;
+}
+
+.qrcode-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+/* ========== 二维码 ========== */
+.qrcode-img {
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 16rpx;
+  border: 2rpx solid #eee;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.qrcode-tip {
+  margin-top: 16rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.qrcode-empty {
+  text-align: center;
+  color: #ccc;
+  font-size: 28rpx;
+  padding: 40rpx 0;
+}
+/* ===================================
+   底部留白
+=================================== */
+
+.bottom-space {
+  height: 60rpx;
+}

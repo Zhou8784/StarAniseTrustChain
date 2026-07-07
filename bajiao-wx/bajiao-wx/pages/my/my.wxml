@@ -1,0 +1,49 @@
+<view class="my-container">
+  <view class="user-card">
+
+<view class="avatar">
+  <text>用户</text>
+</view>
+<view class="user-name">八角品质检测员</view>
+</view>
+</view>
+<!-- 用户信息区域 -->
+<view class="user-info-section">
+  <view class="location-info">
+    <text class="iconfont icon-dingwei location-icon"></text>
+    <text class="address-text" bindtap="refreshLocation">{{address || '点击获取位置'}}</text>
+  </view>
+</view>
+
+<!-- 统计区域 -->
+<view class="stats-container">
+  <view class="stat-item">
+    <text class="stat-value">{{stats.totalDetection}}</text>
+    <text class="stat-label">检测批次</text>
+  </view>
+  <view class="stat-item">
+    <text class="stat-value">{{stats.firstGradeRate}}%</text>
+    <text class="stat-label">一级品率</text>
+  </view>
+  <view class="stat-item">
+    <text class="stat-value">{{stats.chainRecords}}</text>
+    <text class="stat-label">上链记录</text>
+  </view>
+</view>
+<!-- 功能菜单区域 -->
+<!-- 功能菜单 -->
+<view class="menu-container">
+
+<view class="menu-item"
+      data-url="/pages/InspectReport/InspectReport"
+      bindtap="goPage">
+  <text class="menu-text">历史检测记录</text>
+</view>
+
+<view class="menu-item"
+      data-url="/pages/InspectReport1/InspectReport1"
+      bindtap="goPage">
+  <text class="menu-text">区块链存证记录</text>
+</view>
+
+</view>

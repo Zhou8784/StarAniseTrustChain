@@ -1,0 +1,98 @@
+<!-- pages/detection/detection.wxml -->
+
+<view class="header-bar">
+  <text class="header-title">八角品质检测中心</text>
+  <text class="header-subtitle">YOLO26视觉识别 · 区块链存证</text>
+</view>
+
+<view wx:if="{{detectionResult}}" class="result-wrapper">
+
+  <!-- 检测结果 -->
+  <view class="detection-result-card">
+
+    <view class="result-header">
+      <text class="result-badge">✓ 检测完成</text>
+      <text class="result-time">{{detectionResult.reportTime || detectionResult.timestamp || '暂无'}}</text>
+    </view>
+
+    <!-- 品质等级 -->
+    <view class="score-card">
+      <text class="score-label">检测品质等级</text>
+      <text class="score-level">{{detectionResult.grade || '未知'}}</text>
+    </view>
+
+    <!-- 品质检测指标 -->
+    <view class="metrics-card">
+      <view class="card-title">品质检测指标</view>
+      <view class="metrics-grid">
+        <view class="metric-box">
+          <text class="metric-name">正常果</text>
+          <text class="metric-value">{{detectionResult.goodRate}}%</text>
+        </view>
+        <view class="metric-box">
+          <text class="metric-name">破碎率</text>
+          <text class="metric-value">{{detectionResult.brokenRate}}%</text>
+        </view>
+        <view class="metric-box">
+          <text class="metric-name">杂质率</text>
+          <text class="metric-value">{{detectionResult.impurityRate}}%</text>
+        </view>
+        <view class="metric-box">
+          <text class="metric-name">霉变率</text>
+          <text class="metric-value">{{detectionResult.mildewRate}}</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- 区块链存证信息 -->
+  <view class="chain-card">
+    <view class="chain-title">区块链存证信息</view>
+
+    <view class="chain-item">
+      <text>检测地址</text>
+      <text>{{detectionResult.detectLocation || '未获取地址'}}</text>
+    </view>
+
+    <view class="chain-item">
+      <text>时间戳</text>
+      <text>{{detectionResult.reportTime || detectionResult.timestamp || '暂无'}}</text>
+    </view>
+
+    <view class="chain-item">
+      <text>哈希值</text>
+      <text>{{detectionResult.blockchainTxHash || '待生成'}}</text>
+    </view>
+
+    <view class="chain-item">
+      <text>存证状态</text>
+      <text>{{detectionResult.blockchainStatus || '未上链'}}</text>
+    </view>
+
+    <view class="chain-item">
+      <text>溯源码</text>
+      <text>{{detectionResult.traceCode || '暂无'}}</text>
+    </view>
+  </view>
+
+  <!-- 上链按钮 -->
+  <view class="blockchain-btn" bindtap="uploadToBlockchain">
+    <text class="btn-text">数据上链存证</text>
+  </view>
+
+  <!-- 生成溯源码 -->
+  <view class="trace-btn" bindtap="generateTraceCode">
+    <text>生成产品溯源码</text>
+  </view>
+
+</view>
+
+<!-- 无检测结果 - 居中显示 -->
+<view wx:else class="empty-wrapper">
+  <view class="empty-box">
+    <text class="empty-icon">📷</text>
+    <text class="empty-title">暂无检测结果</text>
+    <text class="empty-desc">请等待设备自动检测</text>
+  </view>
+</view>

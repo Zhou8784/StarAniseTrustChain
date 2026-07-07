@@ -1,0 +1,148 @@
+/* pages/my/my.wxss */
+page {
+  background: #fff; 
+}
+
+.my-container {
+  background:linear-gradient(
+    135deg,
+    #0F6A41,
+    #27AE60
+  );
+
+  border-bottom-left-radius:30rpx;
+  border-bottom-right-radius:30rpx;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+
+.user-card{
+  margin-top:40rpx;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.avatar{
+  width:160rpx;
+  height:160rpx;
+
+  border-radius:50%;
+
+  background:#fff;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  color:#0F6A41;
+  font-size:56rpx;
+  font-weight:700;
+
+  box-shadow:0 8rpx 30rpx rgba(0,0,0,.08);
+}
+
+.user-name{
+  margin-top:60rpx;
+
+  font-size:40rpx;
+  font-weight:600;
+
+  color:#222;
+}
+
+
+/* iconfont 字体定义 */
+@font-face {
+  font-family: "iconfont";
+  src: url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAP4AAsAAAAACCAAAAOqAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHFQGYACDBgqDdINMATYCJAMMCwgABCAFhGcHPBsuB8guIScbXkQqokFTLFsxVXH35sJOW3yMxcN/+7X7Zub/xaWpdrFEIokmDmkboVBJkCqR0olk79QdWnM3TJPJTTVi4veb33M78EbbOhKhWaSJWxNPNDNyLfeBkkcSntwrIAdYJoWUyN7Zh/ElskQK2FfIyurLvTiT5EArTaDR85Jh/v/vHf+GJ3LbADDH8vCBfQ/oAzX2IOzkAXkKsnswFnmJQIcNiVyOMvnlIKDZT20gnBsTHySV0RzXtwAvwag0VIY2oUYnFsQLKtKT/A3wHHw+/hAOLSRVhrnMyX1GO1g68rylYBIjf8DDCVTnhAoZKyszx22z85xrlFzhqqNK6UYX1oqQRo1IEoFQU9dr/uMlooZZ3gUWKEU6KZHDJfhKQKmc/zRqtOMVvFPUoaMrZdQR4ufwRPjrO4UhmYyfXVEq1lmNEGEfgng7cVyelpY2xTo8HjQoRzH5YQt7gzfzxosT2lgx6gpTvaatWnvUsfHxeb+j9OSi5YLDWy8tmrN63gqwytlZ4SjVmbZabM3hLSuFF47KXvIZYE0PSlmucxw88qdP8f2B3b8lnLNn/PSSCNfs5vuH/NFJ/8IP4fKOL7Li/Hfu80CfGyuRP7c6fL4cD2SqZAE+X/avzSb9pZPOL2eX74Mjcs773+uDRDbR1VPRVWZrkff7fvsDXUHEfQ/wL7xDwh+twNO8MlFdXJ0yX56XKy9QzNg8hhfz0ryiTlRXvjierhjlhTz+BPJ1xdE5/FJtgSi56Hu/EVv3nY99BVp+adlQXbE6/+TRifjj4RnhY5ljHvM4P4ifJk0rhXvRPfQxu+Zj+RrQmrMK/j/+jf+7aQqM/9dSJeDTgGfgby3A3EDbzTuDP6q6BpFFC5FLldDpIZDdcX9VpTp04BdWw4CH/upBOE5oy4h4SBomIWszhRXqElQ6bUGtzTZ0WJYxvdMglqsoOjBnkEDoMwFJjzfI+mxihXoJlRHPUOvzBx1Ow3+xTnMxmCSohaJ22NoLjW3YxtgaGhAtRfpOSwspi1UiYjdSEahVafKZLGRDZIgh9i69jlIGMgRbYSa3HbJYMGQJNqE2qjJQysaq1UzVW1Rt2ArSEEgLCmkHteoFGbXBbBgPTbPfVwrR62TRgoBYZZKwM1LEIS0VDYBlKW1QzZUsY9dFT4eiGBCDkLQVlCnYEYuaxCC2up0J0oZSMfSIs2KpLRSDKlXzq60Ptw46mENyyGUKmRJtD/241+i28Gwft+m7kREAAAA=') format('woff2');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dingwei:before {
+  content: "\e7a3";
+}
+
+/* 用户信息区域样式 */
+.user-info-section {
+  padding: 30rpx 40rpx;
+  background-color: #fff;
+}
+
+.location-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.location-icon {
+  font-size: 32rpx;
+  color: #0F6A41;
+  margin-right: 10rpx;
+}
+
+.address-text {
+  font-size: 28rpx;
+  color: #666;
+  flex: 1;
+}
+
+/* 统计区域样式 */
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 40rpx 30rpx;
+  background-color: #fff;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #0F6A41;
+  margin-bottom: 10rpx;
+}
+
+.stat-label {
+  font-size: 28rpx;
+  color: #666;
+}
+
+/* 功能菜单区域样式 */
+.menu-container {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.menu-item {
+  padding: 30rpx 40rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  display: flex;
+  align-items: center;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-text {
+  font-size: 32rpx;
+  color: #333;
+}
