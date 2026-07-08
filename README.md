@@ -10,27 +10,53 @@
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![WeChat](https://img.shields.io/badge/Platform-WeChat%20MiniProgram-brightgreen)](https://developers.weixin.qq.com/miniprogram/dev/framework/)
 
+
 ## 📖 Introduction
 
-This project addresses the critical issues in the star anise industry, such as inconsistent quality assessment relying solely on human senses, and the lack of a transparent supply chain traceability system. Built upon the **D-Robotics RDK X5** edge computing platform, we designed an embedded intelligent system that integrates **AI vision inspection**, **multi-modal feature fusion analysis**, and a **local hash-chain anti-tampering mechanism**.
+Star anise is a vital economic crop in China, widely used in food processing and pharmaceuticals. To address the industry challenges of inefficient manual inspection, inconsistent grading standards, and lack of reliable traceability, this project develops a smart detection and traceability system based on the **RDK X5** edge computing platform.
 
-The system utilizes the **GS130WI stereo camera** to capture RGB images and depth data. We deploy **YOLO26** models to detect external defects (mold, damage, impurities) in real-time. By fusing color, texture, and depth features, a lightweight **MLP regression network** predicts internal quality indicators such as volatile oil, moisture, and shikimic acid content. All inspection results are secured via a local **SHA256 hash-chain** and stored in a SQLite database to ensure data integrity. Users can upload photos via a WeChat Mini Program (`bajiao-wx`) and instantly receive inspection reports and traceability information.
+Utilizing the D-Robotics RDK X5 as the core edge node and a **GS130WI stereo camera** for image acquisition, the system deploys a **YOLO26** model to automatically identify good, broken, impure, and moldy star anise fruits. It calculates key quality metrics (intact rate, damage rate, etc.) and generates standardized quality reports. To ensure trust, a **blockchain storage mechanism** is introduced: it encrypts inspection data via SHA-256 and stores the hashes on-chain, preventing tampering. Finally, a **WeChat Mini Program** provides a unique traceability QR code for every batch, enabling full-lifecycle traceability.
 
-## ✨ Features
+## ✨ Core Features
 
-- **🔍 Real-time Defect Detection**: Utilizes BPU-optimized YOLO26 models (`yolo26n_bayese_640x640_nv12.bin`) for rapid identification of good, moldy, broken, and impure star anise fruits.
-- **📊 Internal Quality Prediction**: Fuses RGB color, texture features, and physical depth data from the binocular camera to estimate moisture, volatile oil, and shikimic acid levels.
-- **⛓️ Local Anti-Tampering Record**: Implements a lightweight hash-chain in local SQLite (`star_anise.db`) to generate `txHash` and `blockHeight`, ensuring data trustworthiness without expensive public blockchain nodes.
-- **📱 WeChat Mini Program Integration**: Powered by a Python Flask backend (`app.py`) providing RESTful APIs, enabling one-click photo capture, detection, report generation, and QR code traceability via WeChat.
+- **🔍 YOLO26 Defect Detection**: Real-time, millisecond-level recognition of intact, broken, moldy, and impure fruits.
+- **📊 Smart Grading & Report Generation**: Automatically calculates key indicators, generates comprehensive scores, and provides AI analytical conclusions.
+- **⛓️ Blockchain Trusted Storage**: Encrypts key data (timestamp, batch ID, grade) via SHA-256, generating a transaction hash (`tx_hash`) for tamper-proof storage.
+- **📱 WeChat Mini Program Interface**: Scan the QR code or enter the batch ID to instantly view inspection reports, quality metrics, blockchain proofs, and origin info.
+- **⚙️ Automated Conveyor Belt System**: Uses 30% duty cycle PWM signals via GPIO to drive the TB6612 motor module and conveyor belt for smooth, automated sample feeding.
 
 ## 🛠️ System Architecture
 
-- **Edge Device**: D-Robotics RDK X5 (10 TOPS BPU)
-- **Sensor**: RDK GS130WI Stereo Camera (MIPI CSI)
-- **AI Models**: YOLO26 Object Detection (BPU INT8 Quantized) + MLP Regression
-- **Backend Service**: Python Flask Framework (`app.py` + `api/` + `services/`)
-- **Client**: WeChat Mini Program (`bajiao-wx/`)
-- **Data Storage**: SQLite Hash-Chain Database (`star_anise.db`)
+### 1. Hardware Architecture
+A lightweight, multi-layer horizontal stack design (Top → Middle → Bottom):
+- **Top Layer (Perception & Control)**: RDK X5 board, GS130WI stereo camera, TB6612 driver module, and active cooling fan.
+- **Middle Layer (Physical Isolation & Routing)**: Separates top and bottom layers, routing FPC cables and control lines vertically.
+- **Bottom Layer (Actuation & Transmission)**: Contains a DC gear motor and a green conveyor belt driven at a 30% PWM duty cycle for stable sample feeding.
+
+### 2. Software Architecture
+A three-layer design: Edge AI + Lightweight Data Communication + WeChat Mini Program.
+- **Edge Layer**: RDK X5 (YOLO26 inference + Flask API + Data Hashing).
+- **Communication Layer**: Uses HTTP POST requests to transmit structured data and retrieves the on-chain proof (`tx_hash`).
+- **Application Layer**: WeChat Mini Program (QR scanner, API calls, JSON rendering, report generation).
+
+## 🚀 Quick Start
+
+### 1. Hardware Setup
+- **Board**: D-Robotics **RDK X5** (Pre-flashed with OS).
+- **Camera**: **GS130WI Stereo Camera** (Connect to CAM0/CAM1 MIPI interfaces).
+- **Motor Driver**: **TB6612** (Connect to GPIO & PWM pins).
+- **Power**: 5V DC power supply for the board, camera, and driver.
+
+### 2. Backend Deployment on Edge
+```bash
+# Enter project directory
+cd StarAniseTrustChain
+
+# Install Python dependencies
+pip3 install -r requirements.txt
+
+# Run the Flask backend (Default port 5000)
+python3 app.py
 
 ## 📂 Project Structure
 
