@@ -24,7 +24,7 @@
 
 - **边缘计算硬件**：地瓜机器人 RDK X5（10 TOPS BPU 算力）
 - **感知设备**：RDK GS130WI 双目摄像头 (MIPI CSI 接口)
-- **算法模型**：YOLO26 目标检测 (BPU 量化) + 轻量级 MLP 回归
+- **算法模型**：YOLO26 目标检测 
 - **后台服务**：Python Flask 框架 (`app.py` + `api/` + `services/`)
 - **应用端**：微信小程序 (`bajiao-wx/`)
 - **数据存储**：SQLite 哈希链数据库 (`star_anise.db`)
