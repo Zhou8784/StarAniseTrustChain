@@ -1,4 +1,4 @@
-### 英文版 `README.md`
+### `README.md`
 
 ```markdown
 # Star Anise AI Quality Inspection & Traceability System 🍃🔍
