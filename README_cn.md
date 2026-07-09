@@ -21,6 +21,30 @@
 - **📱 微信小程序溯源交互**：通过扫码或输入批次号，一键查询检测报告、品质指标、区块链存证信息及产品来源。
 - **⚙️ 自动化检测流水线**：通过 GPIO/PWM 输出 30% 占空比信号驱动 TB6612 电机模块与传送带，实现自动化匀速上料。
 
+## 📸 效果展示
+
+### 1. 实物与硬件架构
+<div align="center">
+  <img src="assets/hardware_photo.png" width="80%" alt="系统整体实物图" />
+  <br/>
+  <em>图1：八角品质智能检测终端实物与机械结构</em>
+</div>
+
+### 2. 微信小程序交互界面
+<div align="center">
+  <img src="assets/app_report.png" width="45%" alt="检测报告界面" />
+  <img src="assets/app_scan.png" width="45%" alt="溯源扫码界面" />
+  <br/>
+  <em>图2：小程序检测报告与产品溯源界面</em>
+</div>
+
+### 3. 区块链存证与闭环流程
+<div align="center">
+  <img src="assets/blockchain_info.png" width="45%" alt="区块链存证凭证" />
+  <img src="assets/architecture.png" width="45%" alt="系统闭环流程" />
+  <br/>
+  <em>图3：区块链存证凭证与边缘AI+溯源闭环图</em>
+</div>
 ## 🛠️ 系统架构
 
 ### 1. 硬件架构
