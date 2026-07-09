@@ -17,6 +17,31 @@ Star anise is a vital economic crop in China, widely used in food processing and
 
 Utilizing the D-Robotics RDK X5 as the core edge node and a **GS130WI stereo camera** for image acquisition, the system deploys a **YOLO26** model to automatically identify good, broken, impure, and moldy star anise fruits. It calculates key quality metrics (intact rate, damage rate, etc.) and generates standardized quality reports. To ensure trust, a **blockchain storage mechanism** is introduced: it encrypts inspection data via SHA-256 and stores the hashes on-chain, preventing tampering. Finally, a **WeChat Mini Program** provides a unique traceability QR code for every batch, enabling full-lifecycle traceability.
 
+## 📸 效果展示
+
+### 1. 实物与硬件架构
+<div align="center">
+  <img src="assets/hardware_photo.jpg" width="80%" alt="系统整体实物图" />
+  <br/>
+  <em>图1：八角品质智能检测终端实物与机械结构</em>
+</div>
+
+### 2. 微信小程序交互界面
+<div align="center">
+  <img src="assets/app_report.jpg" width="45%" alt="检测报告界面" />
+  <img src="assets/app_scan.jpg" width="45%" alt="溯源扫码界面" />
+  <br/>
+  <em>图2：小程序检测报告与产品溯源界面</em>
+</div>
+
+### 3. 区块链存证与闭环流程
+<div align="center">
+  <img src="assets/blockchain_info.jpg" width="45%" alt="区块链存证凭证" />
+  <img src="assets/architecture.jpg" width="45%" alt="系统闭环流程" />
+  <br/>
+  <em>图3：区块链存证凭证与边缘AI+溯源闭环图</em>
+</div>
+
 ## ✨ Core Features
 
 - **🔍 YOLO26 Defect Detection**: Real-time, millisecond-level recognition of intact, broken, moldy, and impure fruits.
@@ -57,6 +82,7 @@ pip3 install -r requirements.txt
 
 # Run the Flask backend (Default port 5000)
 python3 app.py
+
 
 ## 📂 Project Structure
 
